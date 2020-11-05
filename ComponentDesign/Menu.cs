@@ -14,11 +14,21 @@ namespace ComponentDesign
         private List<Item> MenuList; // Households the carrier has on its route
         private int numOfItems;
 
+        // default constructor
         public Menu()
         {
             MenuList = new List<Item>();
             numOfItems = 0;
         }
+
+        // json parser constructor
+        public Menu(string path)
+        {
+            MenuList = new List<Item>();
+            numOfItems = 0;
+        }
+
+
 
         public int NumOfItems
         {
@@ -39,6 +49,8 @@ namespace ComponentDesign
 
 
         }
+
+
 
     }
 }
