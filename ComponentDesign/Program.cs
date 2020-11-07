@@ -13,7 +13,7 @@ namespace ComponentDesign
     public class Program
     {
 
-        public static Menu menu = new Menu("C:/Users/Matthew/source/repos/ComponentDesign2/menu_items.json");
+        public static Menu menu = new Menu("menu_items.json");
 
         public static void Main(string[] args)
         {
