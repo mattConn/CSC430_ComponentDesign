@@ -13,5 +13,10 @@ namespace ComponentDesign.Pages
         {
 
         }
+
+        public async Task OnPostItemHandler()
+        {
+            Program.count++;
+        }
     }
 }

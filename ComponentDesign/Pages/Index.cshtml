@@ -2,10 +2,12 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+
 }
 
-<h2>Menu Len: @Program.menu.NumOfItems</h2>
+<h2>Items in Cart: @Program.count</h2>
 <div>
+    <h2>Menu</h2>
     @foreach (var item in Program.menu.getMenu())
     {
         <div class="menu-item">
@@ -13,7 +15,12 @@
             <p>@item.Price</p>
             <p>@item.Description</p>
             <p>@item.Quantity</p>
-            <button>Add To Cart</button>
+
+            <form asp-page-handler="ItemHandler" method="post">
+                <button class="btn btn-default">Add To Cart</button>
+            </form>
         </div>
     }
 </div>
+
+

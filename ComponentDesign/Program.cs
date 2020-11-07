@@ -14,12 +14,8 @@ namespace ComponentDesign
     {
 
         public static Menu menu = new Menu("menu_items.json");
-        public static List<Item> shoppingCart;
-
-        public static void addToCart(Item item)
-        {
-            shoppingCart.Add(item);
-        }
+        public static Menu cart = new Menu();
+        public static int count = 0; // TEMP
 
         public static void Main(string[] args)
         {
