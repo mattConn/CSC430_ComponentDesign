@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
 
 namespace ComponentDesign
 {
@@ -20,13 +20,19 @@ namespace ComponentDesign
             MenuList = new List<Item>();
             numOfItems = 0;
         }
+        
 
         // json parser constructor
         public Menu(string path)
         {
-            MenuList = new List<Item>();
-            numOfItems = 0;
+
+                string jsonParse = File.ReadAllText(path);
+                MenuList = JsonConvert.DeserializeObject<List<Item>>(jsonParse);
+                numOfItems = this.MenuList.Count();
+                
+          
         }
+   
 
 
 
@@ -50,6 +56,15 @@ namespace ComponentDesign
 
         }
 
+        public void insertItem(Item newItem)
+        {
+            MenuList.Add(newItem);
+        }
+
+        public void removeItem(Item item)
+        {
+            MenuList.Remove(item);
+        }
 
 
     }

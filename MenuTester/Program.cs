@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using ComponentDesign;
 
 
@@ -8,8 +9,12 @@ namespace MenuTester
     {
         static void Main(string[] args)
         {
-            Menu m = new Menu();
-            Console.WriteLine(m);
+            string path = "D:/Documents/CSI CSC Courses/CSC430 - Software Engineering/Labs/Midterm/CSC430_ComponentDesign/MenuMaker";
+           
+         
+            Menu m = new Menu(path);
+            Console.WriteLine(m.NumOfItems);
+
         }
     }
 }

@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="MenuMaker">
       <HintPath>..\MenuMaker\bin\Debug\netstandard2.0\MenuMaker.dll</HintPath>
     </Reference>
