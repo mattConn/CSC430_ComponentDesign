@@ -9,7 +9,6 @@ namespace ComponentDesign.Pages
 {
     public class IndexModel : PageModel
     {
-        public static string test = "HELLO WORLD";
         public void OnGet()
         {
 
