@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Burger",
+    "description": "Delicious quarter pounder",
+    "quantity": "5",
+    "price": 8.99
+  },
+  {
+    "name": "Fries",
+    "description": "Crispy golden fries",
+    "quantity": "10",
+    "price": 4.99
+  }
+]
