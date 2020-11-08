@@ -14,9 +14,12 @@ namespace ComponentDesign.Pages
 
         }
 
-        public async Task OnPostItemHandler()
+        public async Task OnPostItemHandler(string myVar)
         {
             Program.count++;
+            Program.cart.insertItem(Program.menu.findItem(myVar));
+
         }
+
     }
 }

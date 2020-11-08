@@ -59,11 +59,18 @@ namespace ComponentDesign
         public void insertItem(Item newItem)
         {
             MenuList.Add(newItem);
+            numOfItems++;
         }
 
         public void removeItem(Item item)
         {
             MenuList.Remove(item);
+            numOfItems--;
+        }
+
+        public Item findItem(string name)
+        {
+            return MenuList.Find(x => x.Name == name);
         }
 
 

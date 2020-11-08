@@ -5,7 +5,6 @@
 
 }
 
-<h2>Items in Cart: @Program.count</h2>
 <div>
     <h2>Menu</h2>
     @foreach (var item in Program.menu.getMenu())
@@ -16,11 +15,30 @@
             <p>@item.Description</p>
             <p>@item.Quantity</p>
 
-            <form asp-page-handler="ItemHandler" method="post">
+            <form asp-page-handler="ItemHandler" asp-route-myVar="@item.Name" method="post">
                 <button class="btn btn-default">Add To Cart</button>
+                
+                
             </form>
         </div>
+
     }
 </div>
 
+
+<h2>Items in Cart: @Program.count</h2>
+<div>
+    <h2>Cart</h2>
+    @if (Program.cart.NumOfItems > 0)
+    {
+        @foreach (var item in Program.menu.getMenu())
+        {
+            <div class="menu-item">
+                <h3>@item.Name</h3>
+                <p>@item.Price</p>
+            </div>
+
+        }
+    }
+</div>
 
