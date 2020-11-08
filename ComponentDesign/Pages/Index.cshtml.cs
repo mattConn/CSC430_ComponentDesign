@@ -29,6 +29,8 @@ namespace ComponentDesign.Pages
             var addItem = Program.menu.findItem(myVar);
             Program.cart.removeItem(addItem);
             Program.cartTotal -= addItem.Price;
+            if (Program.cartTotal < 0)
+                Program.cartTotal = 0;
         }
 
     }
