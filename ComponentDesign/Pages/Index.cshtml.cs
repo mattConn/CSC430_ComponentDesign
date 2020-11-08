@@ -14,11 +14,21 @@ namespace ComponentDesign.Pages
 
         }
 
-        public async Task OnPostItemHandler(string myVar)
+        public async Task OnPostCartAppend(string myVar)
         {
             Program.count++;
-            Program.cart.insertItem(Program.menu.findItem(myVar));
+            var addItem = Program.menu.findItem(myVar);
+            Program.cart.insertItem(addItem);
+            Program.cartTotal += addItem.Price;
+        }
 
+
+        public async Task OnPostCartRemove(string myVar)
+        {
+            Program.count--;
+            var addItem = Program.menu.findItem(myVar);
+            Program.cart.removeItem(addItem);
+            Program.cartTotal -= addItem.Price;
         }
 
     }

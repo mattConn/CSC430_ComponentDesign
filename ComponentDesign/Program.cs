@@ -17,6 +17,7 @@ namespace ComponentDesign
         public static Menu cart = new Menu();
         public static string Name= " ";
         public static int count = 0; // TEMP
+        public static double cartTotal = 0.00; // TEMP
 
         public static void Main(string[] args)
         {

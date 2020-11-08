@@ -15,7 +15,7 @@
             <p>@item.Description</p>
             <p>@item.Quantity</p>
 
-            <form asp-page-handler="ItemHandler" asp-route-myVar="@item.Name" method="post">
+            <form asp-page-handler="CartAppend" asp-route-myVar="@item.Name" method="post">
                 <button class="btn btn-default">Add To Cart</button>
                 
                 
@@ -26,19 +26,26 @@
 </div>
 
 
-<h2>Items in Cart: @Program.count</h2>
+<h2>Items in Cart: @Program.cart.NumOfItems</h2>
 <div>
     <h2>Cart</h2>
     @if (Program.cart.NumOfItems > 0)
     {
-        @foreach (var item in Program.menu.getMenu())
+        
+        @foreach (var item in Program.cart.getMenu())
         {
             <div class="menu-item">
                 <h3>@item.Name</h3>
                 <p>@item.Price</p>
+
+            <form asp-page-handler="CartRemove" asp-route-myVar="@item.Name" method="post">
+                <button class="btn btn-default">Remove from Cart</button>   
+            </form>
+
             </div>
 
         }
     }
+    <h2>Cart Total: @Program.cartTotal</h2>
 </div>
 
