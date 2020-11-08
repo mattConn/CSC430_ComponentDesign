@@ -35,3 +35,15 @@ body {
         display: none;
     }
 }
+
+.float-right {
+    float:right;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.block-container {
+    display: flex;
+}

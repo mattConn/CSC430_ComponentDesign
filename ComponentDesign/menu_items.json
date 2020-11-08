@@ -10,5 +10,29 @@
     "description": "Crispy golden fries",
     "quantity": "10",
     "price": 4.99
+  },
+  {
+    "name": "Milkshake",
+    "description": "Traditional Vanilla Milkshake",
+    "quantity": "13",
+    "price": 3.99
+  },
+  {
+    "name": "Chicken Fingers and Fries",
+    "description": "Deep fried chicken tenderloins served with fries",
+    "quantity": "20",
+    "price": 7.99
+  },
+  {
+    "name": "Grilled Chicken with Mashed Potatoes",
+    "description": "Grilled chicken breast with homemade mashed potatoes",
+    "quantity": "15",
+    "price": 10.99
+  },
+  {
+    "name": "Chicken Sandwich with Fries",
+    "description": "Deep fried chicken breast served with fries",
+    "quantity": "12",
+    "price": 11.99
   }
 ]
