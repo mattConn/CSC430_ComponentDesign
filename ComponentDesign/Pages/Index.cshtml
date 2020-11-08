@@ -5,31 +5,32 @@
 
 }
 
-<div class="block-container">
-    <div style="display:inline;">
-        <h2 style="text-align: center">Menu</h2>
-        @foreach (var item in Program.menu.getMenu())
-        {
-            <div class="menu-item" style=" border: 1px solid black; border-radius: 25px; padding:30px; margin-bottom: 5px;">
-                <div style="text-align: justify; display: inline;">
-                    <h3 style="display: inline-block">@item.Name</h3>
-                    <p style="display: inline-block; margin-left: 10px;">@item.Price</p>
+<div id="menu-cart-ctn">
+
+    <div id="menu" class="items">
+        <div style="display:inline;">
+            <h2 style="text-align: center">Menu</h2>
+            @foreach (var item in Program.menu.getMenu())
+            {
+                <div class="menu-item" style=" border: 1px solid black; border-radius: 25px; padding:30px; margin-bottom: 5px;">
+                    <div style="text-align: justify; display: inline;">
+                        <h3 style="display: inline-block">@item.Name</h3>
+                        <p style="display: inline-block; margin-left: 10px;">@item.Price</p>
+                    </div>
+                    <p>@item.Description</p>
+
+                    <form asp-page-handler="CartAppend" asp-route-myVar="@item.Name" method="post">
+                        <button class="btn btn-default">Add To Cart</button>
+
+
+                    </form>
                 </div>
-                <p>@item.Description</p>
 
-                <form asp-page-handler="CartAppend" asp-route-myVar="@item.Name" method="post">
-                    <button class="btn btn-default">Add To Cart</button>
-
-
-                </form>
-            </div>
-
-        }
+            }
+        </div>
     </div>
 
-
-
-    <div style="display:inline; position:sticky; margin-left:350px">
+    <div class="items" id="cart">
         <h2 style="text-align: center">Items in Cart: @Program.cart.NumOfItems</h2>
         @if (Program.cart.NumOfItems > 0)
         {
@@ -51,4 +52,4 @@
         }
         <h2>Cart Total: @Program.cartTotal</h2>
     </div>
-</div>
+</div> <!-- end ctn-->

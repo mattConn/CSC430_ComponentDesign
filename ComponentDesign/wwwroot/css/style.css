@@ -1,0 +1,10 @@
+﻿body {
+}
+
+
+.items {
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+    width: 49%;
+}
